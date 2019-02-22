@@ -1,23 +1,16 @@
+let money = prompt("Ваш бюджет на месяц?", "Введите сумму"),
+  time = prompt("Введите дату в формате YYYY-MM-DD", "YYYY-MM-DD");
 
-
-var money = prompt ("Ваш бюджет на месяц?", "Введите сумму");
-var time = prompt ("Введите дату в формате YYYY-MM-DD", "YYYY-MM-DD");
-var appData = {
+let appData = {
   budget: money,
-  timeData: time
+  timeData: time,
+  expenses: {},
+  optionalExpenses: {},
+  income: [],
+  saving: false
 };
 
-var thema = prompt ("Введите обязательную статью расходов в этом месяце");
-var sum = prompt ("Во сколько обойдется?");
+let thema = prompt("Введите обязательную статью расходов в этом месяце"),
+  sum = prompt("Во сколько обойдется?");
 
-var expenses = {
-  topic: thema,
-  amount: sum
-};
-
-var optionalExpenses = {};
-var income = [];
-var savings = false;
-
-var oneDayBudget = (money-sum)/30;
-alert ("бюджет на 1 день: " + oneDayBudget);
+alert(appData.budget / 30);
